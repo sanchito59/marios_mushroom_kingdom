@@ -1,4 +1,8 @@
 class Product < ApplicationRecord
+    scope :product_with_most_reviews, -> { }
+    scope :made_in_usa, -> { where(country_of_origin: "United States of America") }
+    scope :recently_added, -> { }
+
     has_many :reviews, dependent: :destroy
     validates :name, :cost, :country_of_origin, presence: true
 

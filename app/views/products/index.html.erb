@@ -1,6 +1,14 @@
 <h1>Products</h1>
 
 <% if @products.any? %>
+  <form>
+  <label>Sort by:</label>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit" name="made_in_usa">Made In USA</button>
+    <button class="btn btn-primary" type="submit" name="recently_added">Most Recent</button>
+    <button class="btn btn-primary" type="submit" name="product_with_most_reviews">Most Reviewed Product</button>
+  </div>
+</form>
   <ul>
     <% @products.each do |product| %>
       <li><%= link_to product.name, product_path(product) %></li>
