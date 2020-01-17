@@ -1,0 +1,16 @@
+<%= render "layouts/errors", :object => @review %>
+<%= form_for [@product, @review] do |f| %>
+    <%= f.label :author %>
+    <div class="form-group">
+        <%= f.text_field :author %>
+    </div>
+    <%= f.label :content_body %>
+    <div class="form-group">
+        <%= f.text_area :content_body %>
+    </div>
+    <%= f.label :rating %>: <span id="range-value"></span>
+    <div class="form-group">
+        <%= range_field(:review, :rating, in: 1..5, value: '1', step: '1', id: 'slider', class: 'form-width') %>
+        </div>
+    <%= f.submit class: 'btn btn-success' %>
+<% end %>
