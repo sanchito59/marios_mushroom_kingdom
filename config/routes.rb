@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'products#home_page'
+  root to: 'statics#home_page'
   resources :products do
     resources :reviews
   end
