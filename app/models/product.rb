@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
-    scope :product_with_most_reviews, -> { }
+    scope :product_with_most_reviews, -> {( select("products.id, products.name, count(reviews.id) as reviews_count").joins(:reviews).group("products.id").order("reviews_count DESC").limit(1) )}
+
+
     scope :made_in_usa, -> { where(country_of_origin: "United States of America") }
     scope :recently_added, -> { order(created_at: :desc).limit(3)}
 
