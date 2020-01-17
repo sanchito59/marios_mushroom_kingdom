@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     
     # Code for new product form
     def new
-        @product = Product.all
+        @product = Product.new
         render :new
     end
     
