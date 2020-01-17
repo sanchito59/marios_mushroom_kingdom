@@ -3,7 +3,10 @@ class ProductsController < ApplicationController
     # Code for listing all products
     def index
         @products = Product.all
-        if params[:product_with_most_reviews]
+        if params[:search]
+            binding.pry
+            @products = Product.search(params[:search])
+        elsif params[:product_with_most_reviews]
             @products = Product.product_with_most_reviews
         elsif params[:made_in_usa]
             @products = Product.made_in_usa
