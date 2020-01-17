@@ -1,0 +1,44 @@
+<h2>Welcome to Marios mushroom emporium!</h2>
+
+
+<div>
+    <h4>Our most reviewed product!</h4>
+    <% if @most_reviewed_product.any? %>
+    <ul>
+        <% @most_reviewed_product.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+    </ul>
+    <% else %>
+    <p>There are no products yet.</p>
+    <% end %>
+</div>
+
+<div>
+    <h4>Our three most recently added products!</h4>
+    <% if @recently_added.any? %>
+    <ul>
+        <% @recently_added.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+    </ul>
+    <% else %>
+    <p>There are no products yet.</p>
+    <% end %>
+</div>
+
+<div>
+    <h4>Locally Produced</h4>
+    <% if @made_in_usa.any? %>
+    <ul>
+        <% @made_in_usa.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+    </ul>
+    <% else %>
+    <p>There are no products Made in the USA.</p>
+    <% end %>
+</div>
+
+<p><%= link_to "Create new product", new_product_path %></p>
+<p><%= link_to "View all products", products_path %></p>
