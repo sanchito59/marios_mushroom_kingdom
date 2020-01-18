@@ -15,4 +15,4 @@ rand(50..125).times do |index|
   end
 end
 
-p "Created #{Product.count} products with #{Review.count} reviews"
+p "Database has been seeded with #{Product.count} products containing #{Review.count} reviews"
