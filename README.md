@@ -15,7 +15,7 @@ Products are checked for correct entry of information when submitted to the data
 
 #### Zip:
 
-1. Click [here](https://github.com/sanchito59/Appliance Hub.git) to go to the repository location where you will find the clone/download menu.
+1. Click [here](https://github.com/sanchito59/appliancehub.git) to go to the repository location where you will find the clone/download menu.
 
  2. Navigate to the directory (folder) that contains your browser's downloads.
  3. Double-click on **Appliance Hub** directory (folder).
