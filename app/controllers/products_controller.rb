@@ -6,6 +6,10 @@ class ProductsController < ApplicationController
         if params[:search]
             binding.pry
             @products = Product.search(params[:search])
+        elsif params[:a_to_z]
+            @products = Product.a_to_z
+        elsif params[:z_to_a]
+            @products = Product.z_to_a
         elsif params[:product_with_most_reviews]
             @products = Product.product_with_most_reviews
         elsif params[:made_in_usa]
