@@ -6,7 +6,8 @@ Appliance Hub is a CRUD (Create, Read, Update, Delete) application built for com
 
 Products are checked for correct entry of information when submitted to the database so that products never have a detail missing. Products also have reviews properly stored and associated with them in the database, with all columns of information entered for a product. The product makes use of Ruby/Rails as well as ES6 Javascript, SCSS, and Rspec testing for methods and integration.
 
-![screenshot of landing page for product website](https://i.imgur.com/gQ2ItVn.png "read")
+![screenshot of landing page for product website](https://i.imgur.com/gQ2ItVn.png "read")  
+  
 ![screenshot of review](https://i.imgur.com/29d31kb.png "read")
 - - - -
 ### Setup/Installation Requirements
@@ -20,14 +21,17 @@ Products are checked for correct entry of information when submitted to the data
  2. Navigate to the directory (folder) that contains your browser's downloads.
  3. Double-click on **Appliance Hub** directory (folder).
  4. Open directory contents by extracting/unzipping documents from folder.
- 5. In the terminal/command line, and with NPM and Ruby 2.5.1 installed, and within the folder, run `bundle install`.
- 6. Finally, run `ruby Appliance Hub.rb` to use **Appliance Hub**.
+ 3. Make sure your system has `Ruby 2.6.5`, `Rails 6` or higher, and `NPM` installed.
+ 4. With your tools installed, and within the folder, run `bundle install`. Make sure all gems install correctly before moving on.
+ 5. Next run `rake db:create`, `rake db:migrate`, and `rake db:test:prepare`. Make sure all processes complete successfully.
+ 6. To seed the database with test information, run `rake db:seed`. This will fill the database with 50-125 products and 3-15 reviews for each of those products.
+ 7. Finally, run `rails s` or `rails server` and navigate to `localhost:3000` to use **Appliance Hub**.
 
 #### Clone: 
 
- 1. To clone the repository, from your terminal or command line enter: "git clone  https://github.com/sanchito59/Appliance Hub.git"
+ 1. To clone the repository, from your terminal or command line enter: "git clone https://github.com/sanchito59/appliance_hub"
  2. Once the repository finishes downloading you will need to navigate to it in the terminal/command line.
- 3. Make sure your system has `Ruby 2.5.7`, `Rails 6` or higher, and `NPM` installed.
+ 3. Make sure your system has `Ruby 2.6.5`, `Rails 6` or higher, and `NPM` installed.
  4. With your tools installed, and within the folder, run `bundle install`. Make sure all gems install correctly before moving on.
  5. Next run `rake db:create`, `rake db:migrate`, and `rake db:test:prepare`. Make sure all processes complete successfully.
  6. To seed the database with test information, run `rake db:seed`. This will fill the database with 50-125 products and 3-15 reviews for each of those products.
