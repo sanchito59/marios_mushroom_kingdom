@@ -21,6 +21,7 @@
 
 $dark-background: rgb(22, 32, 41);
 $body-background: rgb(212, 214, 209);
+$blue-brand: rgb(5,114,185);
 
 body {
     background-color: $body-background;
@@ -33,13 +34,6 @@ body {
     border-radius: 5px;
     width: 900px;
 }
-
-@include media-breakpoint-up(xs) { 
-    #most-reviewed-home, #most-recent-home, #made-in-usa-home, #all-products, #individual-product-reviews {
-        width: 80%;
-    }
- }
-
 
 .nav-links {
     background-color: $dark-background;
@@ -56,6 +50,44 @@ body {
 
 a {
     color: white;
+}
+
+.product-view {
+    width: 70%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 12px;
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.product-view h5 {
+    text-decoration: underline;
+}
+
+.product-view a { 
+    color: $blue-brand;
+}
+
+.placeholder-image {
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+img {
+    border-radius: 8px;
+    padding: 5px;
+    width: 170px;
+    height: 200px;
+}
+
+.float-right {
+    padding-left: 15px;
+    // float: right;
+}
+
+.product-description {
+    width: 30%;
 }
 
 .dropdown {
@@ -84,3 +116,13 @@ a {
     border-radius: 2px;
     padding: 2px;
 }
+
+@include media-breakpoint-up(xs) { 
+    #most-reviewed-home, #most-recent-home, #made-in-usa-home, #all-products, #individual-product-reviews {
+        width: 80%;
+    }
+
+    .product-view {
+        width: 100%;
+    }
+ }
