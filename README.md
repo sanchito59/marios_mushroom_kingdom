@@ -6,7 +6,7 @@ Appliance Hub is a CRUD (Create, Read, Update, Delete) application built for com
 
 Products are checked for correct entry of information when submitted to the database so that products never have a detail missing. Products also have reviews properly stored and associated with them in the database, with all columns of information entered for a product. The product makes use of Ruby/Rails as well as ES6 Javascript, SCSS, and Rspec testing for methods and integration.
 
-![screenshot of landing page for product website](https://i.imgur.com/gQ2ItVn.png "read")  
+![screenshot of landing page for product website](https://i.imgur.com/BpNoohn.png "read")
   
 ![screenshot of review](https://i.imgur.com/29d31kb.png "read")
 - - - -
