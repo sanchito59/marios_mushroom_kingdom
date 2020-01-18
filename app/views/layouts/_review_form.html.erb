@@ -3,15 +3,15 @@
 <%= form_for [@product, @review] do |f| %>
     <%= f.label :author %>
     <div class="form-group">
-        <%= f.text_field :author class: 'form-width' %>
+        <%= f.text_field :author, class: 'form-size' %>
     </div>
     <%= f.label :content_body %>
     <div class="form-group">
-        <%= f.text_area :content_body class: 'form-width' %>
+        <%= f.text_area :content_body, class: 'form-size tall-text-area' %>
     </div>
     <%= f.label :rating %>: <span id="range-value"></span>
     <div class="form-group">
-        <%= range_field(:review, :rating, in: 1..5, value: '1', step: '1', id: 'slider', class: 'form-width') %>
+        <%= range_field(:review, :rating, in: 1..5, value: '1', step: '1', id: 'slider', class: 'form-size') %>
     </div>
     <%= f.submit class: 'btn btn-success' %>
 <% end %>

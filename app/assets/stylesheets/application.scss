@@ -16,14 +16,46 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+$dark-background: rgb(22, 32, 41);
+$body-background: rgb(212, 214, 209);
+
 body {
-    background-color: rgb(228, 228, 228);
+    background-color: $body-background;
 }
 
-#most-reviewed-home, #most-recent-home, #made-in-usa-home {
-    background-color: ivory;
+#most-reviewed-home, #most-recent-home, #made-in-usa-home, #all-products, #individual-product-reviews {
+    background-color:rgb(165, 167, 162);
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
     width: 60%;
+}
+
+.nav-links {
+    background-color: $dark-background;
+    padding: 7.5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    width: 20%;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+.form-size {
+    width: 300px;
+}
+
+.tall-text-area {
+    height: 200px;
+}
+
+.form-size, .tall-text-area {
+    border-radius: 2px;
+    padding: 2px;
 }

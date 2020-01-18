@@ -12,10 +12,11 @@
     <p><%= "#{@product.name}" %> has not been rated yet.</p>
 <% end %>
 <h4><%= @review.content_body %> </h4>
+<div class="nav-links">
+    <p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
+    <p><%= link_to "Delete review", product_review_path(@product, @review),
+                            :data => {:confirm => "Are you sure?",
+                                        :method => "delete"} %></p>
 
-<p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
-<p><%= link_to "Delete review", product_review_path(@product, @review),
-                        :data => {:confirm => "Are you sure?",
-                                       :method => "delete"} %></p>
-
-<p><%= link_to "Return to product", product_path(@product) %></p>
+    <p><%= link_to "Return to product", product_path(@product) %></p>
+</div>
