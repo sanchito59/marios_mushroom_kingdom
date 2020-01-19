@@ -1,7 +1,7 @@
 Product.destroy_all
 Review.destroy_all
 
-rand(50..125).times do |index|
+rand(60..125).times do |index|
   products = []
   products.push(Product.create!(name: Faker::Appliance.equipment,
     cost: Faker::Commerce.price,
