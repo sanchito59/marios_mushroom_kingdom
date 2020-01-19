@@ -23,13 +23,13 @@
         </div>
       </div>
     </form>
-    <ul>
+    <ul class="product-listing">
       <% @products.each do |product| %>
         <div class="product-view">
-          <li><h5><%= product.name %></h5></li>
+          <li><h5><%= link_to product.name, product_path(product, class:"products-titles") %></h5></li>
           <%= link_to image_tag("https://i.picsum.photos/id/39/3456/2304.jpg"), product_path(product), class: "placeholder-image" %>
           <p class="product-description">Lorem ipsum product descripsum a deo inimum malac a marum ilum unde omnis iste natus error sit voluptatem accusantium doloremque laudantium...</p>
-          <p><%= link_to "View Details", product_path(product) %></p>
+          <p class="product-view-link"><%= link_to "View Details", product_path(product) %></p>
         </div>
       <% end %>
     </ul>

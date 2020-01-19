@@ -11,7 +11,7 @@
     <% else %>
     <p><%= "#{@product.name}" %> has not been rated yet.</p>
 <% end %>
-<h4><%= @review.content_body %> </h4>
+<h4 class="product-review-text"><%= @review.content_body %> </h4>
 <div class="nav-links">
     <p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
     <p><%= link_to "Delete review", product_review_path(@product, @review),

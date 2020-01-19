@@ -68,8 +68,9 @@ a {
     margin-bottom: 12px;
 }
 
-.product-view h5 {
+.products-titles a {
     text-decoration: underline;
+    color: black;
 }
 
 .product-view a { 
@@ -88,8 +89,19 @@ img {
     height: 200px;
 }
 
+.product-listing {
+    width: 75%;
+}
+
+// Products page
 .product-description {
-    width: 30%;
+    width: 70%;
+}
+
+// Individual product review
+.product-review-text {
+    width: 40%;
+    margin-bottom: 12px;
 }
 
 .dropdown {
@@ -99,12 +111,12 @@ img {
 
 .dropdown-menu {
     padding: 10px;
+    border: 2px solid $blue-brand;
 }
 
 .dropdownMenuButton {
     width: 40px;
 }
-
 
 .form-size {
     width: 300px;
@@ -112,6 +124,7 @@ img {
 
 .tall-text-area {
     height: 200px;
+    width: 100%;
 }
 
 .form-size, .tall-text-area {
