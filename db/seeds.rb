@@ -9,7 +9,7 @@ rand(60..125).times do |index|
   products
   rand(3..15).times do |review|
     products.each do |product|
-    Review.create! :author => Faker::TvShows::Simpsons.character, :content_body => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue faucibus urna at dignissim. Nunc gravida convallis ullamcorper. Donec sit.", :rating => rand(1..5),
+    Review.create! :author => Faker::Name.name, :content_body => Faker::Books::Lovecraft.paragraph_by_chars(characters: 125), :rating => rand(1..5),
                      :product_id => product.id
     end
   end
