@@ -15,6 +15,7 @@
  */
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
 // Access to FontAwesome
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -22,17 +23,23 @@
 $dark-background: rgb(22, 32, 41);
 $body-background: rgb(212, 214, 209);
 $blue-brand: rgb(5,114,185);
+$product-body-color: rgb(165, 167, 162);
 
 body {
     background-color: $body-background;
 }
 
 #most-reviewed-home, #most-recent-home, #made-in-usa-home, #all-products, #individual-product-reviews {
-    background-color:rgb(165, 167, 162);
+    background-color: $product-body-color;
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
     width: 900px;
+}
+
+// override bootstrap .row in a specific instance
+.margin-left-zero {
+    margin-left: 0px;
 }
 
 .nav-links {
@@ -81,11 +88,6 @@ img {
     height: 200px;
 }
 
-.float-right {
-    padding-left: 15px;
-    // float: right;
-}
-
 .product-description {
     width: 30%;
 }
@@ -119,7 +121,7 @@ img {
 
 @include media-breakpoint-up(xs) { 
     #most-reviewed-home, #most-recent-home, #made-in-usa-home, #all-products, #individual-product-reviews {
-        width: 80%;
+        width: 60%;
     }
 
     .product-view {
